@@ -1,0 +1,178 @@
+*{
+  box-sizing: border-box;
+}
+
+body{
+  margin: 0px;
+  padding: 0px;
+  font-family: 'Roboto', sans-serif;
+  background: #FDFFFC;
+}
+
+.back-img{
+  background-image: url("Images/back-image.jpg");
+  background-position: cover;
+  background-repeat: no-repeat;
+  background-size: cover;
+  height: 900px; /*900px*/
+  max-width: 100%;
+  display: block;
+  filter: blur(0px);
+  opacity: 0.9;
+}
+
+/*GLOBAL*/
+.container{
+  width: 100%;
+  text-align: center;
+}
+
+.hover:hover{
+  color: black;
+  border-bottom: 2px solid white;
+}
+
+                                 /*HEADER*/
+header{
+  padding: 10px;
+  background: #776470;
+  filter: opacity(90%);
+  color: white;
+  height: 80px;
+  position: fixed;
+  top: 20px;
+  width: 100%;
+}
+
+/*Logo*/
+header div{
+  font-size: 40px;
+  padding: 10px;
+  float: left;
+}
+
+/*Navigation*/
+header nav{
+  float: right;
+  padding: 20px;
+  margin-right: 50px;
+}
+
+header nav ul{
+  display: inline;
+  width: 10px;
+}
+
+header nav ul li{
+  display: inline;
+  width: 20px;
+  padding: 10px;
+}
+
+header nav ul li a{
+  text-decoration: none;
+  color: white;
+  font-size: 20px;
+}
+
+header nav ul li a{
+  text-decoration: none;
+  color: white;
+  font-size: 15px;
+}
+
+#active-a{
+  color: black;
+  font-weight: bold;
+  font-size: 18px;
+}
+
+                               /*DISPLAY*/
+.display{
+  position: absolute;
+  left: 0;
+  right: 0;
+  top: 200px;
+  text-align: center;
+  color: white;
+  font-size: 40px;
+}
+
+section .container h1{
+  font-family: 'Berkshire Swash', cursive;
+  margin-bottom: 0;
+  font-size: 80px;
+  font-weight: bold;
+}
+
+section .container h3{
+  font-family: 'Berkshire Swash', cursive;
+  font-weight: bold;
+  font-style: italic;
+  margin-top: 0;
+}
+
+#btn{
+  font-weight: bold;
+  font-size: 15px;
+  cursor: pointer;
+  height: 3rem;
+  width: 8rem;
+  background-color: black;
+  color: white;
+  border-style: hidden;
+  border-radius: 5px;
+  padding: 5px;
+}
+
+                              /*FOOTER*/
+footer{
+  display: grid;
+  grid-template-columns: repeat(4,1fr);
+  padding: 20px;
+  margin: 0 auto;
+  height: 10vh;
+  width: 70%;
+  text-align: center;
+}
+
+footer div{
+  border-left: 0.5px dashed gray;
+  width: 70%;
+  padding: 0 30px;
+  margin: 0 30px;
+  text-align: center;
+}
+
+footer div img{
+  color: white;
+  display: block;
+  /* border: 1px solid green; */
+  margin: 0 auto;
+  height: 55px;
+  width: 55px;
+  /* padding-left: 65px; */
+}
+
+footer div p{
+  font-size: 18px;
+  font-weight: bold;
+  padding: 10px;
+  margin: 0;
+  width: 120%;
+  text-align: center;
+}
+
+footer div button{
+  font-weight: bold;
+  font-size: 15px;
+  border: none;
+  border-radius: 5px;
+  height: 50px;
+  width: 100px;
+  padding: 10px;
+  background-color: black;
+  color: white;
+  cursor: pointer;
+}
+

@@ -1,0 +1,146 @@
+
+
+/* Global Rules */
+body{
+  font-family: 'Roboto', sans-serif;
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  overflow-x: hidden;
+  background-color: #B4206C;
+  /* overflow-y: hidden; */
+  height: 100vh;
+}
+
+.section{
+  padding: 20px;
+  height: 50%;
+}
+
+.images{
+  display:inline-block;
+  max-width: 100%;
+  height: 90%;
+}
+
+.btn{
+  display: inline-block;
+  color: white;
+  text-decoration: none;
+  margin-top: 20px;
+  background-color: #B4206C;
+  border-radius: 4px;
+  padding: 15px;
+}
+
+.hover:hover{
+  color: black;
+  border-bottom: 2px solid white;
+}
+
+/* Header-Navigation */
+header{
+  margin-top: 15px;
+  padding: 10px;
+  height: 5%;
+  background: #776470;
+  filter: opacity(90%);
+  color: white;
+  position: fixed;
+  width: 100%;
+}
+
+header .container-head #logo{
+  float: left;
+  margin-top: 15px;
+  font-size: 2rem;
+}
+
+header .container-head nav{
+  float: right;
+}
+
+header .container-head nav ul{
+  padding: 0px;
+  display: inline-block;
+  margin-right: 30px;
+}
+
+header .container-head nav li{
+  display: inline;
+  margin-right: 20px;
+}
+
+header .container-head nav li a{
+  text-decoration: none;
+  color: white;
+  font-size: 1rem;
+}
+
+#active-a{
+  color: black;
+  font-weight: bold;
+  font-size: 20px;
+}
+
+/* Section-A */
+
+.section-a{
+  margin-top: 10px;
+  overflow: hidden;
+  background: white;
+}
+
+.section-a .container{
+  margin-top: 50px;
+  padding: 50px;
+  weight: 50%;
+  display: inline-flex;
+}
+
+.section-a .jumbotron{
+  width: 50%;
+  line-height: 1.5;
+}
+
+.section-a .container-images{
+  padding: 15px;
+  width: 50%;
+  margin-bottom: 50px;
+  /* border: 2px solid red; */
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-auto-columns: minmax(auto,auto);
+  grid-column-gap: 0px;
+  grid-row-gap: 10px;
+}
+
+.section-a .container-images .img-3{
+  justify-self: center;
+  margin-left: 300px;
+}
+
+.section-a .container h1{
+  color: #B4206C;
+  font-weight: bold;
+  font-size: 1.5rem;
+}
+
+/* Section-B */
+
+.section-b{
+  background-image: url("Images/image-4.jpeg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+}
+
+.section-b .container{
+  font-size: 2rem;
+  text-align: center;
+  color: white;
+}
+
+.section-b span{
+  font-size: 1.5rem;
+}
