@@ -1,0 +1,211 @@
+@import url('https://fonts.googleapis.com/css?family=Kaushan+Script');
+
+
+*{
+    box-sizing: inherit;
+    margin: 0px;
+    padding: 0px;
+  }
+  
+  html{
+    font-size: 62.5%; /*Always use this for high reponsiveness. It allows users to zoom and change the font-size of the page*/
+  }
+  
+  body{
+    font-family: "Lato",sans-serif;
+    font-weight: 400;
+    background: #FDFFFC;
+    box-sizing: border-box;
+    line-height: 1.7;
+  }
+
+/*GLOBAL*/
+.container{
+    width: 100vw;
+    text-align: center;
+  }
+  
+  .hover:hover{
+    color: black;
+    border-bottom: 0.2rem solid white;
+  }
+  
+                                   /*HEADER*/
+  header{
+    padding: 1rem;
+    background: #776470;
+    filter: opacity(90%);
+    color: white;
+    height: 8rem;
+    position: fixed;
+    top: 2rem;
+    width: 100vw;
+  }
+
+  
+/*Logo*/
+header div{
+    font-size: 4rem;
+    padding: 1rem;
+    float: left;
+  }
+
+  /*Navigation*/
+header nav{
+    float: right;
+    padding: 2rem;
+    margin-right: 5rem;
+  }
+  
+  header nav ul{
+    display: inline;
+    /* width: 1rem; */
+  }
+  
+  header nav ul li{
+    display: inline;
+    /* width: 2rem; */
+    padding: 1rem;
+  }
+  
+  header nav ul li a{
+    text-decoration: none;
+    color: white;
+    font-size: 2rem;
+  }
+  
+  header nav ul li a{
+    text-decoration: none;
+    color: white;
+    font-size: 1.5rem;
+  }
+  
+  #active-a{
+    color: black;
+    font-weight: bold;
+    font-size: 1.8rem;
+  }
+
+  /* Display */
+  .display{
+    height: 30rem;
+    margin-top: 15rem;
+    background-image: linear-gradient(
+    to bottom right,
+    rgba(204,192,200,0.5),
+    rgba(74,54,68,0.9)),
+    url(./Images/services-1.jpg);
+    background-position: center;
+    background-size: cover;
+  }
+
+  .display h1{
+      padding: 10rem;
+      font-size: 5rem;
+      color: white;
+      letter-spacing: 1.5rem;
+  }
+
+  .characters{
+      height: 20rem;
+      background-color: rgb(223, 219, 219);
+  }
+  
+  .characters h1{
+      margin: auto auto;
+      position: absolute;
+      text-align: center;
+  }
+
+  .characters h1 .h1-sub{
+      font-family: 'Kaushan Script', cursive;
+      font-size: 2rem;
+      color: rgb(243, 42, 153);
+      text-transform: capitalize;
+      display: block;
+      position: relative;
+      left: 55rem;
+      top: 3rem;
+      text-align: center;
+      
+  }
+
+  .characters h1 .h1-main{
+    display: block;
+    position: relative;
+    left: 55rem;
+    top: 5rem;
+    font-size: 4rem;
+    letter-spacing: 1.5rem;
+}
+
+.flash-cards{
+    display: inline-flex;
+    margin-top: 2rem;
+    /* justify-content: space-between; */
+}
+
+.flash-cards .card1{
+    flex-basis: 200rem;
+    background-color: rgb(241, 231, 231);
+    height: 60rem;
+    width: 100rem;
+    margin-right: 2rem;
+}
+
+.flash-cards .card2{
+    flex-basis: 200rem;
+    background-color: rgb(241, 231, 231);
+    width: 10rem;
+    margin-right: 2rem;
+}
+
+.flash-cards .card3{
+    flex-basis: 200rem;
+    background-color: rgb(241, 231, 231);
+    width: 10rem;
+    margin-right: 2rem;
+}
+
+.flash-cards .card4{
+    flex-basis: 200rem;
+    background-color: rgb(241, 231, 231);
+    width: 10rem;   
+}
+
+.flash-cards .clip{
+    margin-top: 1rem;
+    height: 30rem;
+    display: block;
+    clip-path: circle(43.8% at 50% 50%);
+}
+
+#c1{
+    background-image: url(./Images/clippy1.jpg);
+    background-position: center;
+    background-size: cover;
+}
+
+#c2{
+    background-image: url(./Images/clippy2.jpg);
+    background-position: center;
+    background-size: cover; 
+}
+
+#c3{
+    background-image: url(./Images/clippy3.jpg);
+    background-position: center;
+    background-size: cover; 
+}
+
+#c4{
+    background-image: url(./Images/clippy4.jpg);
+    background-position: center;
+    background-size: cover; 
+}
+
+section span{
+    display: block;
+}
+
+

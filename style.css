@@ -1,90 +1,152 @@
+
+
+
+
+
 *{
-  box-sizing: border-box;
+  box-sizing: inherit;
+  margin: 0px;
+  padding: 0px;
+}
+
+html{
+  font-size: 62.5%; /*Always use this for high reponsiveness. It allows users to zoom and change the font-size of the page*/
 }
 
 body{
-  margin: 0px;
-  padding: 0px;
-  font-family: 'Roboto', sans-serif;
+  font-family: "Lato",sans-serif;
+  font-weight: 400;
   background: #FDFFFC;
+  box-sizing: border-box;
+  line-height: 1.7;
 }
 
 .back-img{
-  background-image: url("Images/back-image.jpg");
+  background-image: linear-gradient(
+    to right,
+    rgba(204,192,200,0.5),
+    rgba(74,54,68,0.5)
+    ),url("Images/back-image.jpg");
   background-position: cover;
   background-repeat: no-repeat;
   background-size: cover;
-  height: 900px; /*900px*/
-  max-width: 100%;
+  height: 100vh; /*900px*/
+  max-width: 100vw;
   display: block;
   filter: blur(0px);
   opacity: 0.9;
+
 }
 
 /*GLOBAL*/
 .container{
-  width: 100%;
+  width: 100vw;
   text-align: center;
 }
 
 .hover:hover{
   color: black;
-  border-bottom: 2px solid white;
+  border-bottom: 0.2rem solid white;
 }
 
                                  /*HEADER*/
 header{
-  padding: 10px;
+  padding: 1rem;
   background: #776470;
   filter: opacity(90%);
   color: white;
-  height: 80px;
+  height: 8rem;
   position: fixed;
-  top: 20px;
-  width: 100%;
+  top: 2rem;
+  width: 100vw;
 }
 
 /*Logo*/
 header div{
-  font-size: 40px;
-  padding: 10px;
+  font-size: 4rem;
+  padding: 1rem;
   float: left;
 }
 
 /*Navigation*/
 header nav{
   float: right;
-  padding: 20px;
-  margin-right: 50px;
+  padding: 2rem;
+  margin-right: 5rem;
 }
 
 header nav ul{
   display: inline;
-  width: 10px;
+  /* width: 1rem; */
 }
 
 header nav ul li{
   display: inline;
-  width: 20px;
-  padding: 10px;
+  /* width: 2rem; */
+  padding: 1rem;
 }
 
 header nav ul li a{
   text-decoration: none;
   color: white;
-  font-size: 20px;
+  font-size: 2rem;
 }
 
 header nav ul li a{
   text-decoration: none;
   color: white;
-  font-size: 15px;
+  font-size: 1.5rem;
 }
 
 #active-a{
   color: black;
   font-weight: bold;
-  font-size: 18px;
+  font-size: 1.8rem;
+}
+
+/* Animations */
+@keyframes moveInFromRight {
+  0% {
+    opacity: 0;
+    transform: translateX(20rem);
+  }
+  50% {
+    opacity: .5;
+    transform: translateX(-5rem);
+  }
+  100% {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+@keyframes moveInFromLeft {
+    0% {
+      opacity: 0;
+      transform: translateX(-20rem);
+    }
+    50% {
+      opacity: .5;
+      transform: translateX(5rem);
+    }
+    100% {
+      opacity: 1;
+      transform: translateX(0);
+    }
+  }
+@keyframes moveInFromBottom{
+  0% {
+    opacity: 0;
+    transform: translateY(20rem);
+  }
+  /* 50% {
+    opacity: .5;
+    transform: translateY(10rem);
+  } */
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
 }
 
                                /*DISPLAY*/
@@ -92,55 +154,64 @@ header nav ul li a{
   position: absolute;
   left: 0;
   right: 0;
-  top: 200px;
+  top: 35rem;
   text-align: center;
   color: white;
-  font-size: 40px;
+  font-size: 4rem;
 }
 
 section .container h1{
-  font-family: 'Berkshire Swash', cursive;
+  display: block;
+  font-family: "Lato",sans-serif;
   margin-bottom: 0;
-  font-size: 80px;
-  font-weight: bold;
+  font-size: 6rem;
+  font-weight: 400;
+  letter-spacing: .8rem;
+  animation-name: moveInFromRight;
+  animation-duration: 3s;
 }
 
 section .container h3{
-  font-family: 'Berkshire Swash', cursive;
-  font-weight: bold;
+  font-family: "Lato",sans-serif;
+  font-size: 3rem;
+  font-weight: 700;
   font-style: italic;
   margin-top: 0;
+  letter-spacing: .8rem;
+  animation-name: moveInFromLeft;
+  animation-duration: 3s;
 }
 
-#btn{
-  font-weight: bold;
-  font-size: 15px;
-  cursor: pointer;
-  height: 3rem;
-  width: 8rem;
-  background-color: black;
+.btn:link,.btn:visited{
+  font-size: 2rem;
+  background-color: rgba(105, 61, 71, 0.904);
   color: white;
-  border-style: hidden;
-  border-radius: 5px;
-  padding: 5px;
+  text-transform: uppercase;
+  text-decoration: none;
+  padding: 1.5rem 4rem;
+  display: inline-block; /*Notice how we made the btn display inline-block*/
+  border-radius: 70px;
+  margin-top: 3rem;
+  animation-name: moveInFromBottom;
+  animation-duration: 2s;
 }
 
                               /*FOOTER*/
 footer{
   display: grid;
   grid-template-columns: repeat(4,1fr);
-  padding: 20px;
+  padding: 2rem;
   margin: 0 auto;
   height: 10vh;
-  width: 70%;
+  width: 70vw;
   text-align: center;
 }
 
 footer div{
   border-left: 0.5px dashed gray;
   width: 70%;
-  padding: 0 30px;
-  margin: 0 30px;
+  padding: 0 3rem;
+  margin: 0 3rem;
   text-align: center;
 }
 
@@ -149,28 +220,28 @@ footer div img{
   display: block;
   /* border: 1px solid green; */
   margin: 0 auto;
-  height: 55px;
-  width: 55px;
+  height: 5.5rem;
+  width: 5.5rem;
   /* padding-left: 65px; */
 }
 
 footer div p{
-  font-size: 18px;
+  font-size: 1.8rem;
   font-weight: bold;
-  padding: 10px;
+  padding: 1rem;
   margin: 0;
-  width: 120%;
+  /* width: 120%; */
   text-align: center;
 }
 
 footer div button{
   font-weight: bold;
-  font-size: 15px;
+  font-size: 1.5rem;
   border: none;
-  border-radius: 5px;
-  height: 50px;
-  width: 100px;
-  padding: 10px;
+  border-radius: .5rem;
+  height: 5rem;
+  width: 10rem;
+  padding: 1rem;
   background-color: black;
   color: white;
   cursor: pointer;
