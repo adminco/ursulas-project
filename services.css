@@ -1,6 +1,6 @@
 @import url('https://fonts.googleapis.com/css?family=Kaushan+Script');
 
-
+/* Global Reset */
 *{
     box-sizing: inherit;
     margin: 0px;
@@ -19,7 +19,7 @@
     line-height: 1.7;
   }
 
-/*GLOBAL*/
+/*GLOBAL RULES*/
 .container{
     width: 100vw;
     text-align: center;
@@ -86,7 +86,7 @@ header nav{
     font-size: 1.8rem;
   }
 
-  /* Display */
+  /* Display(Services Section) */
   .display{
     height: 30rem;
     margin-top: 15rem;
@@ -101,20 +101,19 @@ header nav{
 
   .display h1{
       padding: 10rem;
-      font-size: 5rem;
+      font-size: 6rem;
       color: white;
       letter-spacing: 1.5rem;
   }
 
+/* Special Offers */
   .characters{
-      height: 20rem;
+      height: 30rem;
       background-color: rgb(223, 219, 219);
   }
   
-  .characters h1{
-      margin: auto auto;
-      position: absolute;
-      text-align: center;
+  .characters h1{  
+    padding: 1rem;
   }
 
   .characters h1 .h1-sub{
@@ -123,52 +122,48 @@ header nav{
       color: rgb(243, 42, 153);
       text-transform: capitalize;
       display: block;
-      position: relative;
-      left: 55rem;
-      top: 3rem;
       text-align: center;
-      
   }
 
   .characters h1 .h1-main{
     display: block;
-    position: relative;
-    left: 55rem;
-    top: 5rem;
-    font-size: 4rem;
+    font-size: 5rem;
     letter-spacing: 1.5rem;
+    text-align: center;
 }
 
+/* Flash Cards */
 .flash-cards{
-    display: inline-flex;
+    display: flex;
     margin-top: 2rem;
-    /* justify-content: space-between; */
+    flex-wrap: wrap;
+    flex-direction: row;
+    justify-content: center;
 }
 
 .flash-cards .card1{
-    flex-basis: 200rem;
+    flex-basis: 30rem;
     background-color: rgb(241, 231, 231);
     height: 60rem;
-    width: 100rem;
     margin-right: 2rem;
 }
 
 .flash-cards .card2{
-    flex-basis: 200rem;
+    flex-basis: 30rem;
     background-color: rgb(241, 231, 231);
     width: 10rem;
     margin-right: 2rem;
 }
 
 .flash-cards .card3{
-    flex-basis: 200rem;
+    flex-basis: 30rem;
     background-color: rgb(241, 231, 231);
     width: 10rem;
     margin-right: 2rem;
 }
 
 .flash-cards .card4{
-    flex-basis: 200rem;
+    flex-basis: 30rem;
     background-color: rgb(241, 231, 231);
     width: 10rem;   
 }
@@ -208,4 +203,89 @@ section span{
     display: block;
 }
 
+/* Adding buttons to the flashcards */
+.btn:link,.btn:visited{
+    font-size: 1.7rem;
+    display: inline-block;
+    color: black;
+    text-decoration: none;
+    margin-top: 2rem;
+    background-color: rgb(211, 174, 174);
+    border-radius: 7rem;
+    padding: 1.5rem;
+    width: 13rem;
+}
 
+.btn:hover{
+    font-size: 1.7rem;
+    display: inline-block;
+    color: white;
+    text-decoration: none;
+    margin-top: 2rem;
+    background-color: #B4206C;
+    border-radius: 7rem;
+    padding: 1.5rem;
+    width: 13rem;
+    animation-name: changeButtonColor;
+    animation-duration: 1s;
+}
+
+/* Animation */
+@keyframes changeButtonColor{
+    0%{
+       background-color: white; 
+    }
+    100%{
+        background-color: #B4206C; 
+    }
+}
+
+.p-card{
+    display: none;
+}
+
+/* Details */
+.details .braids{
+    display: none;
+    width: 30%;
+    margin: 1rem auto;
+    border: .2rem solid black;
+    position: absolute;
+    z-index: 50;
+    background-color: rgb(252, 247, 247);
+    padding: 1rem;
+    top: 55vh;
+    left: 35vw;
+}
+
+.details .braids h1{
+    border-bottom: .1rem solid gray;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+}
+
+.details .span-1{
+    display: inline-block;
+    text-align: start;
+    margin-top: 2rem;
+    margin-left: 1rem;
+}
+
+
+.details .btn-details{
+    width: 10rem;
+    font-size: 1.3rem;
+    margin-left: 10rem;
+    border-radius: 0;
+    padding: 1rem;
+    margin-bottom: 1rem;
+}
+
+.x-icon{
+    height: 1.5rem; 
+    width: 1.5rem;
+    position: absolute;
+    left: 45rem;
+    top: .5rem;
+    cursor: pointer;
+}

@@ -94,7 +94,7 @@ header .container-head nav li a{
 .section-a .container{
   margin-top: 50px;
   padding: 50px;
-  weight: 50%;
+  width: 100%;
   display: inline-flex;
 }
 

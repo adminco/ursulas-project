@@ -190,7 +190,7 @@ section .container h3{
   text-decoration: none;
   padding: 1.5rem 4rem;
   display: inline-block; /*Notice how we made the btn display inline-block*/
-  border-radius: 70px;
+  border-radius: 7rem;
   margin-top: 3rem;
   animation-name: moveInFromBottom;
   animation-duration: 2s;
