@@ -80,7 +80,8 @@ header .container-head nav li a{
 #active-a{
   color: black;
   font-weight: bold;
-  font-size: 20px;
+  font-size: 18px;
+  text-decoration: underline;
 }
 
 /* Section-A */

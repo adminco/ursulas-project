@@ -24,7 +24,7 @@ body{
 .back-img{
   background-image: linear-gradient(
     to right,
-    rgba(204,192,200,0.5),
+    rgba(204,192,200,0.3),
     rgba(74,54,68,0.5)
     ),url("Images/back-image.jpg");
   background-position: cover;
@@ -33,9 +33,7 @@ body{
   height: 100vh; /*900px*/
   max-width: 100vw;
   display: block;
-  filter: blur(0px);
-  opacity: 0.9;
-
+  filter: blur(.1rem);
 }
 
 /*GLOBAL*/
@@ -102,6 +100,7 @@ header nav ul li a{
   color: black;
   font-weight: bold;
   font-size: 1.8rem;
+  text-decoration: underline;
 }
 
 /* Animations */

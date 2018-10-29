@@ -84,6 +84,7 @@ header nav{
     color: black;
     font-weight: bold;
     font-size: 1.8rem;
+    text-decoration: underline;
   }
 
   /* Display(Services Section) */
