@@ -1,8 +1,5 @@
 
 
-
-
-
 *{
   box-sizing: inherit;
   margin: 0px;
@@ -19,6 +16,7 @@ body{
   background: #FDFFFC;
   box-sizing: border-box;
   line-height: 1.7;
+  overflow: hidden;
 }
 
 .back-img{
@@ -30,10 +28,10 @@ body{
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
-  height: 100vh; /*900px*/
+  object-fit: cover;
+  height: 100vh;
   max-width: 100vw;
   display: block;
-  /* filter: blur(.1rem); */
 }
 
 /*GLOBAL*/
@@ -55,8 +53,9 @@ header{
   color: white;
   height: 8rem;
   position: fixed;
-  top: 2rem;
+  top: 0;
   width: 100vw;
+  z-index: 10;
 }
 
 /*Logo*/
@@ -193,55 +192,4 @@ section .container h3{
   margin-top: 3rem;
   animation-name: moveInFromBottom;
   animation-duration: 2s;
-}
-
-                              /*FOOTER*/
-footer{
-  display: grid;
-  grid-template-columns: repeat(4,1fr);
-  padding: 2rem;
-  margin: 0 auto;
-  height: 10vh;
-  width: 70vw;
-  text-align: center;
-}
-
-footer div{
-  border-left: 0.5px dashed gray;
-  width: 70%;
-  padding: 0 3rem;
-  margin: 0 3rem;
-  text-align: center;
-}
-
-footer div img{
-  color: white;
-  display: block;
-  /* border: 1px solid green; */
-  margin: 0 auto;
-  height: 5.5rem;
-  width: 5.5rem;
-  /* padding-left: 65px; */
-}
-
-footer div p{
-  font-size: 1.8rem;
-  font-weight: bold;
-  padding: 1rem;
-  margin: 0;
-  /* width: 120%; */
-  text-align: center;
-}
-
-footer div button{
-  font-weight: bold;
-  font-size: 1.5rem;
-  border: none;
-  border-radius: .5rem;
-  height: 5rem;
-  width: 10rem;
-  padding: 1rem;
-  background-color: black;
-  color: white;
-  cursor: pointer;
 }

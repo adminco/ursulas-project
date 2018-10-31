@@ -8,7 +8,7 @@
   }
   
   html{
-    font-size: 62.5%; /*Always use this for high reponsiveness. It allows users to zoom and change the font-size of the page*/
+    font-size: 62.5%; /*Always use this for high responsiveness. It allows users to zoom and change the font-size of the page*/
   }
   
   body{
@@ -27,7 +27,7 @@
   
   .hover:hover{
     color: black;
-    border-bottom: 0.2rem solid white;
+    border-bottom: .2rem solid white;
   }
   
                                    /*HEADER*/
@@ -38,8 +38,9 @@
     color: white;
     height: 8rem;
     position: fixed;
-    top: 2rem;
+    top: 0;
     width: 100vw;
+    z-index: 10;
   }
 
   
@@ -248,7 +249,7 @@ section span{
 /* Details */
 .details .braids{
     display: none;
-    width: 30%;
+    width: 49rem;
     margin: 1rem auto;
     border: .2rem solid black;
     position: absolute;
@@ -286,7 +287,7 @@ section span{
     height: 1.5rem; 
     width: 1.5rem;
     position: absolute;
-    left: 45rem;
-    top: .5rem;
+    left: 47rem;
+    top: 0vh;
     cursor: pointer;
 }

@@ -2,6 +2,7 @@
 <html lang="en" dir="ltr">
   <head>
     <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>UK's Hair | About</title>
     <link rel="stylesheet" href="about.css">
     <link href="https://fonts.googleapis.com/css?family=Berkshire+Swash" rel="stylesheet">
@@ -10,27 +11,24 @@
   <body>
     <!-- Header/Nav -->
     <header>
-      <div class="container-head">
-        <div id="logo">
+      <div id="logo">
           UK's Hair
-        </div>
-        <nav>
-          <ul>
-            <li><a href="index.html" class="hover">HOME</a></li>
-            <li><a href="about.html" class="hover" id="active-a">ABOUT</a></li>
-            <li><a href="services.html" class="hover">SERVICES</a></li>
-            <li><a href="#" class="hover">CONTACT</a></li>
-          </ul>
-        </nav>
-        
       </div>
-    </header>
+      <nav>
+        <ul>
+          <li><a href="index.html" class="hover" >HOME</a></li>
+          <li><a href="about.html" class="hover" id="active-a">ABOUT</a></li>
+          <li><a href="services.html" class="hover">SERVICES</a></li>
+          <li><a href="#" class="hover">CONTACT</a></li>
+        </ul>
+      </nav>
+  </header>
     <!--Top Section-->
     <section class="section section-a">
         <div class="container">
           <div class="jumbotron">
-            <h1>ABOUT ME</h1>
-            <p>legam anim quid duis cillum irure aliqua fugiat ipsum quis anim magna aute nisi
+            <h1 class="main-h1">ABOUT ME</h1>
+            <p class="main-p">legam anim quid duis cillum irure aliqua fugiat ipsum quis anim magna aute nisi
               cillum labore duis aliqua dolor nisi aute velit sint multos esse irure malis
               labore noster temporlegam anim quid duis cillum irure aliqua fugiat ipsum quis anim magna aute nisi
                 cillum labore duis aliqua dolor nisi aute velit sint multos esse irure malis
@@ -40,10 +38,15 @@
               <a href="#" class="btn">READ MORE</a>
           </div>
           <div class="container-images">
+            <div class="images image-1"></div>
+            <div class="images image-2"></div>
+            <div class="images image-3"></div>
+          </div>
+          <!-- <div class="container-images">
             <img src="Images/image-1.jpeg" class="images img-1" alt="">
             <img src="Images/image-2.jpeg" class="images img-2" alt="">
             <img src="Images/image-6.jpeg" class="images img-3" alt="">
-          </div>
+          </div> -->
         </div>
     </section>
 
@@ -52,7 +55,7 @@
       <div class="container">
           <h1>Special Offers</h1>
           <h2>NEW CLIENT OFFER $15 OFF (total services on your first visit)</h2>
-          <a href="#" class="btn"><span>BOOK AN APPOINTMENT</span></a>
+          <a href="#" class="btn">BOOK AN APPOINTMENT</a>
       </div>
     </section>
     <script src="main.js"></script>

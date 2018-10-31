@@ -1,124 +1,168 @@
+@import url('https://fonts.googleapis.com/css?family=Kaushan+Script');
 
-
-/* Global Rules */
-body{
-  font-family: 'Roboto', sans-serif;
+/* Global Reset */
+*{
   padding: 0;
   margin: 0;
+  box-sizing: inherit;
+}
+
+html{
+  font-size: 62.5%;
+}
+
+body{
+  font-family: "Lato",sans-serif;
+  font-weight: 400;
+  background: #FDFFFC;
   box-sizing: border-box;
-  overflow-x: hidden;
-  background-color: #B4206C;
-  /* overflow-y: hidden; */
-  height: 100vh;
+  line-height: 1.7;
+  overflow: hidden;
 }
 
+/*GLOBAL RULES*/
 .section{
-  padding: 20px;
-  height: 50%;
+  padding: 2rem;
+  height: 50vh;
 }
 
-.images{
-  display:inline-block;
-  max-width: 100%;
-  height: 90%;
+.hover:hover{
+  color: black;
+  border-bottom: .2rem solid white;
 }
 
 .btn{
   display: inline-block;
   color: white;
   text-decoration: none;
-  margin-top: 20px;
+  margin-top: 2rem;
   background-color: #B4206C;
-  border-radius: 4px;
-  padding: 15px;
-}
-
-.hover:hover{
-  color: black;
-  border-bottom: 2px solid white;
+  border-radius: .4rem;
+  padding: 1.5rem;
 }
 
 /* Header-Navigation */
 header{
-  margin-top: 15px;
-  padding: 10px;
-  height: 5%;
+  padding: 1rem;
   background: #776470;
   filter: opacity(90%);
   color: white;
+  height: 8rem;
   position: fixed;
-  width: 100%;
+  top: 0;
+  width: 100vw;
+  z-index: 10;
 }
 
-header .container-head #logo{
+/*Logo*/
+header div{
+  font-size: 4rem;
+  padding: 1rem;
   float: left;
-  margin-top: 15px;
+}
+
+/*Navigation*/
+header nav{
+  float: right;
+  padding: 2rem;
+  margin-right: 5rem;
+}
+
+header nav ul{
+  display: inline;
+  /* width: 1rem; */
+}
+
+header nav ul li{
+  display: inline;
+  /* width: 2rem; */
+  padding: 1rem;
+}
+
+header nav ul li a{
+  text-decoration: none;
+  color: white;
   font-size: 2rem;
 }
 
-header .container-head nav{
-  float: right;
-}
-
-header .container-head nav ul{
-  padding: 0px;
-  display: inline-block;
-  margin-right: 30px;
-}
-
-header .container-head nav li{
-  display: inline;
-  margin-right: 20px;
-}
-
-header .container-head nav li a{
+header nav ul li a{
   text-decoration: none;
   color: white;
-  font-size: 1rem;
+  font-size: 1.5rem;
 }
 
 #active-a{
   color: black;
   font-weight: bold;
-  font-size: 18px;
+  font-size: 1.8rem;
   text-decoration: underline;
 }
 
 /* Section-A */
 
 .section-a{
-  margin-top: 10px;
-  overflow: hidden;
   background: white;
 }
 
 .section-a .container{
-  margin-top: 50px;
-  padding: 50px;
-  width: 100%;
-  display: inline-flex;
+  margin-top: 5rem;
+  padding: 5rem;
+  width: 100vw;
+  display: block;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  align-items: auto;
 }
 
 .section-a .jumbotron{
-  width: 50%;
-  line-height: 1.5;
+  padding: 1rem;
+}
+
+.section-a .jumbotron .main-h1{
+  font-size: 2rem;
+}
+
+.section-a .jumbotron .main-p{
+  font-size: 2rem;
 }
 
 .section-a .container-images{
-  padding: 15px;
-  width: 50%;
-  margin-bottom: 50px;
-  /* border: 2px solid red; */
   display: grid;
-  grid-template-columns: 1fr 1fr;
-  grid-auto-columns: minmax(auto,auto);
-  grid-column-gap: 0px;
-  grid-row-gap: 10px;
+  grid-template-columns: repeat(3,1fr);
+  grid-template-rows: repeat(2,1fr);
+  grid-gap: 1rem;
+  margin-left: 1rem;
+}
+
+.images{
+  height: 15rem;
+}
+
+.image-1{
+  background-image: url("Images/image-1.jpeg");
+  background-position: center;
+  background-size: cover;
+}
+
+.image-2{
+  background-image: url("Images/image-2.jpeg");
+  background-position: center;
+  background-size: cover;
+}
+
+.image-3 {
+  background-image: url("Images/image-6.jpeg");
+  background-position: center;
+  background-size: cover;
+  grid-column: 1;
+  position: relative;
+  left: 8rem;
+  bottom: 2rem;
 }
 
 .section-a .container-images .img-3{
   justify-self: center;
-  margin-left: 300px;
+  margin-left: 30rem;
 }
 
 .section-a .container h1{
@@ -137,11 +181,9 @@ header .container-head nav li a{
 }
 
 .section-b .container{
-  font-size: 2rem;
+  font-size: 3rem;
   text-align: center;
   color: white;
-}
-
-.section-b span{
-  font-size: 1.5rem;
+  padding: 1rem;
+  margin-top: 5rem;
 }
