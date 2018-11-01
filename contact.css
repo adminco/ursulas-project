@@ -1,0 +1,209 @@
+@import url('https://fonts.googleapis.com/css?family=Kaushan+Script');
+
+/* Global Reset */
+*{
+    box-sizing: inherit;
+    margin: 0px;
+    padding: 0px;
+  }
+  
+  html{
+    font-size: 62.5%; 
+  }
+  
+  body{
+    font-family: "Lato",sans-serif;
+    font-weight: 400;
+    background: #FDFFFC;
+    box-sizing: border-box;
+    line-height: 1.7;
+    overflow: hidden;
+  }
+
+/*GLOBAL RULES*/
+  .hover:hover{
+    color: black;
+    border-bottom: .2rem solid white;
+  }
+
+  /*HEADER*/
+  header{
+    padding: 1rem;
+    background: #776470;
+    filter: opacity(90%);
+    color: white;
+    height: 8rem;
+    position: fixed;
+    top: 0;
+    width: 100vw;
+    z-index: 10;
+  }
+
+  /*Logo*/
+header div{
+    font-size: 4rem;
+    padding: 1rem;
+    float: left;
+  }
+
+  /*Navigation*/
+header nav{
+    float: right;
+    padding: 2rem;
+    margin-right: 5rem;
+  }
+  
+  header nav ul{
+    display: inline;
+    /* width: 1rem; */
+  }
+  
+  header nav ul li{
+    display: inline;
+    /* width: 2rem; */
+    padding: 1rem;
+  }
+  
+  header nav ul li a{
+    text-decoration: none;
+    color: white;
+    font-size: 2rem;
+  }
+  
+  header nav ul li a{
+    text-decoration: none;
+    color: white;
+    font-size: 1.5rem;
+  }
+  
+  #active-a{
+    color: black;
+    font-weight: bold;
+    font-size: 1.8rem;
+    text-decoration: underline;
+  }
+
+/* MAIN CONTACT SECTION */
+section{
+   background-color: #efb7b7;
+   margin-top: 8rem; 
+   height: 100vh;
+}
+
+section .container{
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    padding: 8rem;
+}
+
+.contact-us form{
+    margin-top: 3rem;
+}
+
+section .container .forms{
+    display: block;
+    width: 80%;
+    height: 5rem;
+    margin-bottom: .5rem;
+    padding: 1rem;
+    font-size: 1.5rem;
+}
+
+#textarea{
+    height: 20rem;
+    resize: none;
+    font-size: 2rem;
+}
+
+/* Button */
+.btn:link,.btn:visited{
+    font-size: 1.7rem;
+    display: inline-block;
+    color: black;
+    text-decoration: none;
+    text-align: center;
+    margin-top: 2rem;
+    background-color: rgb(139, 110, 110);
+    border-radius: 7rem;
+    padding: 1.5rem;
+    width: 13rem;
+}
+
+.btn:hover{
+    font-size: 1.7rem;
+    display: inline-block;
+    color: white;
+    text-decoration: none;
+    margin-top: 2rem;
+    background-color: #B4206C;
+    border-radius: 7rem;
+    padding: 1.5rem;
+    width: 13rem;
+    animation-name: changeButtonColor;
+    animation-duration: 1s;
+}
+
+
+.main-h1{
+    font-size: 4rem;
+    font-weight: 3rem;
+    letter-spacing: 1rem;
+}
+
+.main-p{
+    font-size: 2rem;
+}
+
+/* AVAILABILITY */
+.calendar{
+    margin-top: 3rem;
+}
+
+.month{
+    border: 1px solid rgb(157, 157, 247);
+    background-color: rgb(157, 157, 247);
+    height: 3rem;
+    width: 56.5%;
+    text-align: center;
+    padding: .3rem 1rem;
+    font-size: 1.5rem;
+}
+
+.days{
+    width: 50%;
+    height: 35rem;
+    display: grid;
+    grid-template-columns: repeat(7, 15%);
+    grid-template-rows: repeat(6, auto);
+    grid-gap: .5rem;
+}
+
+.in-days:nth-child(odd){
+    /* border: 1px solid white; */
+    padding: 1rem;
+    font-size: 1.5rem;
+    text-align: center;
+}
+
+.in-days:nth-child(odd):hover{
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
+
+.in-days:nth-child(even){
+    /* border: 1px solid red; */
+    padding: 1rem;
+    font-size: 1.5rem;
+    text-align: center;
+}
+
+.in-days:nth-child(even):hover{
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
+
+.days div:not(.dim){
+    background-color: white;
+}
+
+.dim{
+    background-color: rgb(157, 157, 247);
+}
