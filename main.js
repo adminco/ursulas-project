@@ -14,11 +14,9 @@ $(document).ready(() => {
     $characters = $(".characters");
     $flashcards = $(".flash-cards");
     $xIcon = $(".x-icon");
-    $form = $("#myForm");
-    url = 'https://script.google.com/macros/s/AKfycby4OS1nkRomzF3F1bjQAAq1f1nCXgDXAUw7la5ZV3IUnpAL4W-l/exec';
     const scriptURL = 'https://script.google.com/macros/s/AKfycbw8r6Avdseg7IId43GXm2FUX8XcLRyaVnwn6lOk275HQi2R0wGl/exec';
     const form = document.forms['submit-to-google-sheet'];
-    
+    const btn = document.querySelector('#formBtn');
 
     // This is for the flash-cards
     $xIcon.on("click", () => {
@@ -57,10 +55,15 @@ $(document).ready(() => {
     //     console.log("Success!")
     // });
 
-  form.addEventListener('submit', e => {
-    e.preventDefault()
-    fetch(scriptURL, { method: 'POST', body: new FormData(form)})
-      .then(response => console.log('Success!', response))
-      .catch(error => console.error('Error!', error.message))
-  });
+  
+
+    //   Creating an event handler to use to submit he form
+    form.addEventListener('submit', e => {
+        e.preventDefault()
+        fetch(scriptURL, { method: 'POST', body: new FormData(form)})
+            .then(response => console.log('Success!', response))
+            .catch(error => console.error('Error!', error.message))
+        });
+    
+
 });

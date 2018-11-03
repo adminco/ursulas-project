@@ -115,7 +115,8 @@ section .container .forms{
 }
 
 /* Button */
-.btn:link,.btn:visited{
+#btn{
+    border: 0;
     font-size: 1.7rem;
     display: inline-block;
     color: black;
@@ -126,9 +127,11 @@ section .container .forms{
     border-radius: 7rem;
     padding: 1.5rem;
     width: 13rem;
+    cursor: pointer;
 }
 
-.btn:hover{
+#btn:hover{
+    border: 0;
     font-size: 1.7rem;
     display: inline-block;
     color: white;
@@ -140,6 +143,7 @@ section .container .forms{
     width: 13rem;
     animation-name: changeButtonColor;
     animation-duration: 1s;
+    cursor: pointer;
 }
 
 
