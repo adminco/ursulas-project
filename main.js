@@ -1,3 +1,5 @@
+
+
 $(document).ready(() => {
     $btn1 = $("#btn-1");
     $btn2 = $("#btn-2");
@@ -12,7 +14,13 @@ $(document).ready(() => {
     $characters = $(".characters");
     $flashcards = $(".flash-cards");
     $xIcon = $(".x-icon");
+    $form = $("#myForm");
+    url = 'https://script.google.com/macros/s/AKfycby4OS1nkRomzF3F1bjQAAq1f1nCXgDXAUw7la5ZV3IUnpAL4W-l/exec';
+    const scriptURL = 'https://script.google.com/macros/s/AKfycbw8r6Avdseg7IId43GXm2FUX8XcLRyaVnwn6lOk275HQi2R0wGl/exec';
+    const form = document.forms['submit-to-google-sheet'];
+    
 
+    // This is for the flash-cards
     $xIcon.on("click", () => {
         $braids.fadeOut(600);
     });
@@ -37,4 +45,22 @@ $(document).ready(() => {
         $pcard4.toggle();
     });
 
+    // This is an Ajax request to POST the form data to Google sheets
+    // $("#btn").on('click', (event) => {
+    //     event.preventDefault();
+    //     $jqxhr = $.ajax({
+    //     url: url,
+    //     method: "GET",
+    //     dataType: "json",
+    //     data: $form.serialize()
+    //     })
+    //     console.log("Success!")
+    // });
+
+  form.addEventListener('submit', e => {
+    e.preventDefault()
+    fetch(scriptURL, { method: 'POST', body: new FormData(form)})
+      .then(response => console.log('Success!', response))
+      .catch(error => console.error('Error!', error.message))
+  });
 });
