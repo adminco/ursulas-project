@@ -1,3 +1,5 @@
+
+
 $(document).ready(() => {
     $btn1 = $("#btn-1");
     $btn2 = $("#btn-2");
@@ -12,7 +14,14 @@ $(document).ready(() => {
     $characters = $(".characters");
     $flashcards = $(".flash-cards");
     $xIcon = $(".x-icon");
-
+    const scriptURL = 'https://script.google.com/macros/s/AKfycbw8r6Avdseg7IId43GXm2FUX8XcLRyaVnwn6lOk275HQi2R0wGl/exec';
+    const form = document.forms['submit-to-google-sheet'];
+    $btn = $('#btn');
+    $tclose = $("#t-close");
+    $thanks = $(".thanks");
+    $toBlur = $(".toBlur");
+    
+    // This is for the flash-cards
     $xIcon.on("click", () => {
         $braids.fadeOut(600);
     });
@@ -36,5 +45,29 @@ $(document).ready(() => {
         event.preventDefault();
         $pcard4.toggle();
     });
+
+    //   Creating an event handler to use to submit he form
+    form.addEventListener('submit', e => {
+        e.preventDefault()
+        fetch(scriptURL, { method: 'POST', body: new FormData(form)})
+            .then(response => console.log('Success!', response))
+            .then($thanks.setAttribute('display','block'))
+            .catch(error => console.error('Error!', error.message))
+        });
+    
+    $btn.on("click", () => {
+        $thanks.fadeIn(600).delay(100);
+        $toBlur.css('filter', 'blur(5px)');
+    });
+
+    $tclose.on("click", () => {
+        $thanks.fadeOut(600);
+        $toBlur.css('filter', 'blur(0px)');
+        $('#myForm').trigger("reset");
+    });
+
+    // tclose.addEventListener('click', e => {
+    //     thanks.setAttribute('display','none');
+    // });
 
 });
