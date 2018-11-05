@@ -1,7 +1,9 @@
 @import url('https://fonts.googleapis.com/css?family=Kaushan+Script');
 
 /* Global Reset */
-*{
+*,
+*::before,
+*::after{
     box-sizing: inherit;
     margin: 0px;
     padding: 0px;
@@ -14,7 +16,7 @@
   body{
     font-family: "Lato",sans-serif;
     font-weight: 400;
-    background: #FDFFFC;
+    background: #efb7b7;
     box-sizing: border-box;
     line-height: 1.7;
   }
@@ -210,3 +212,82 @@ section .container .forms{
 .dim{
     background-color: rgb(157, 157, 247);
 }
+
+/* FOOTER */
+footer{
+    background-color: black;
+    color: white;
+    width: 100vw;
+    height: 35vh;
+    position: relative;
+    margin-bottom: 0; 
+    bottom: 0;
+    left: 0;
+}
+
+.f-container{
+    display: grid;  
+    grid-template-columns: repeat(3, 30%);
+    grid-gap: 1rem;
+    padding: 5rem;
+}
+
+.f-container div{
+    border: 1px solid black;
+    height: 20rem;
+}
+
+.c-details{
+    font-size: 1.3rem;
+    margin-bottom: .5rem;
+}
+
+#pink{
+    color: #efb7b7;
+}
+
+.fas{
+    color: #efb7b7;
+}
+
+.after-font{
+    margin-left: .5rem;
+}
+
+/* Thank You Page */
+.thanks{
+    display: none;
+    height: 30rem;
+    width: 50%;
+    background-color: white;
+    border-radius: 1rem;
+    position: absolute;
+    z-index: 10;
+    top:30rem;
+    left: 50rem;
+    border: solid black;
+
+}
+
+.t-container{
+    text-align: center;
+    margin-top: 5rem;
+    font-size: 2rem;
+}
+
+#t-close{
+    color:black;
+    position: absolute;
+    top: -3.7%;
+    left: 99.5%;
+    cursor: pointer;
+    transition: 100ms;
+}
+
+#t-close:hover{
+    color: red;
+}
+
+/* .toBlur{
+    filter: blur(5px);
+} */
